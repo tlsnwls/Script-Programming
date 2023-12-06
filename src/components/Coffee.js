@@ -2,9 +2,9 @@ import { Col, Container, Row } from 'react-bootstrap';
 import data from './coffee.json';
 import { useState, useEffect } from 'react';
 
-function Coffee() {
+function Coffee(props) {
   const [items, setItems] = useState([]); // 빈 배열로 초기화
-
+  
   useEffect(() => {
     // 데이터가 객체라고 가정하고 객체를 배열로 변환하는 예시
     const dataArray = data['Espresso'];
@@ -13,7 +13,9 @@ function Coffee() {
 
   return (
     <div>
+      <span>
       <CardList items={items} />
+      </span>
     </div>
   );
 }

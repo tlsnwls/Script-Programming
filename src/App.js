@@ -4,14 +4,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Main from './components/Main';
 import Location from './components/Map';
 import MyMenu from './components/MyMenu';
-import SignUp from './components/Signup';
 import Coffee from './components/Coffee';
 import NonCoffee from './components/NonCoffee';
 import Foods from './components/Foods';
+import Login from './components/Login';
 
 function App() {
 
   return (
+    
     <Router>
       <div>
         <Navbar className = "NavBarStyle" style={{ backgroundColor: 'brown' }} variant="dark">
@@ -25,7 +26,7 @@ function App() {
               </NavDropdown>
               <Link to="/map" className="nav-link">Map</Link>
               <Link to="/mymenu" className="nav-link">MyMenu</Link>
-              <Link to="/signup" className="nav-link">SignUp</Link>
+              <Link to="/login" className="nav-link">LogIn</Link>
             </Nav>
           </Container>
         </Navbar>
@@ -37,7 +38,7 @@ function App() {
           <Route path="/foods" element={<Foods />} />
           <Route path="/map" element={<Location />} />
           <Route path="/mymenu" element={<MyMenu />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
       <div className='wrap'>
@@ -52,7 +53,6 @@ function App() {
         </footer>
       </div>
     </Router>
-    
   );
 }
 
