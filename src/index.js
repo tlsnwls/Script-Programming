@@ -5,11 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './store';
+import {firebaseinit} from './components/firebaseinit'; // 새로고침 시 로그인 삭제 방지 session 유지
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <App />
+    <App/>
   </Provider>
 );
 

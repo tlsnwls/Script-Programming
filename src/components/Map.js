@@ -14,7 +14,7 @@ function Location() {
     };
     const map = new kakao.maps.Map(container,options);
     const markerPostion1 = new kakao.maps.LatLng(37.871443, 127.155154);
-    const markerPostion2 = new kakao.maps.LatLng(37.873448, 127.154985); // 좌표 수정하기
+    const markerPostion2 = new kakao.maps.LatLng(37.873448, 127.154985); 
     const marker1 = new kakao.maps.Marker({
       position : markerPostion1
     });
